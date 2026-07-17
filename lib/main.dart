@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/view/home_screen.dart';
 import 'package:todo_app/view/splash_screen.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Todo App',
       debugShowCheckedModeBanner: false,
 
-      home: SplashScreen (),
+      home: HomeScreen (),
     );
   }
 }

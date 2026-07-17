@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/view/second_onboading.dart';
+import 'package:todo_app/view/third_onboading.dart';
 
-class FirstOnboading extends StatefulWidget {
-  const FirstOnboading({super.key});
+class SecondOnboading extends StatefulWidget {
+  const SecondOnboading({super.key});
 
   @override
-  State<FirstOnboading> createState() => _FirstOnboadingState();
+  State<SecondOnboading> createState() => _SecondOnboadingState();
 }
 
-class _FirstOnboadingState extends State<FirstOnboading> {
+class _SecondOnboadingState extends State<SecondOnboading> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,15 +32,15 @@ class _FirstOnboadingState extends State<FirstOnboading> {
         child: Center(
           child: Column(
             children: [
-              Image.asset("assets/images/first_onboading.png"),
+              Image.asset("assets/images/second_onboading.png"),
               SizedBox(height: 30),
               Row(
                 mainAxisAlignment: .center,
-                children: [indicator(true), indicator(false), indicator(false)],
+                children: [indicator(false), indicator(true), indicator(false)],
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 30,),
               Text(
-                "Manage your tasks",
+                "Create daily routine",
                 style: TextStyle(
                   fontFamily: 'Lato',
                   fontWeight: FontWeight.bold,
@@ -48,16 +48,16 @@ class _FirstOnboadingState extends State<FirstOnboading> {
                   color: Color.fromRGBO(255, 255, 255, 0.87),
                 ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 10,),
               Text(
-                "You can easily manage all of your daily\n          tasks in DoMe for free",
+                "      In Uptodo  you can create your \npersonalized routine to stay productive",
                 style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'Lato',
                   color: Color.fromRGBO(255, 255, 255, 0.87),
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 30,),
               Row(
                 mainAxisAlignment: .spaceBetween,
                 children: [
@@ -74,25 +74,16 @@ class _FirstOnboadingState extends State<FirstOnboading> {
                       ),
                     ),
                   ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
+                  ElevatedButton(style: ElevatedButton.styleFrom(
                       backgroundColor: Color.fromRGBO(136, 117, 255, 1),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadiusGeometry.circular(3),
-                      ),
-                    ),
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => SecondOnboading()),);
-                    },
-                    child: Text(
-                      "NEXT",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'Lato',
-                        color: Colors.white,
-                      ),
-                    ),
+                          borderRadius: BorderRadiusGeometry.circular(3)
+                      )
                   ),
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => ThirdOnboading()),);
+
+                      }, child: Text("NEXT",style: TextStyle(fontSize: 16,fontFamily: 'Lato',color: Colors.white),))
                 ],
               ),
             ],

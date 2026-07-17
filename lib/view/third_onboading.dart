@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/view/second_onboading.dart';
+import 'package:todo_app/view/start_screen.dart';
 
-class FirstOnboading extends StatefulWidget {
-  const FirstOnboading({super.key});
+class ThirdOnboading extends StatefulWidget {
+  const ThirdOnboading({super.key});
 
   @override
-  State<FirstOnboading> createState() => _FirstOnboadingState();
+  State<ThirdOnboading> createState() => _ThirdOnboadingState();
 }
 
-class _FirstOnboadingState extends State<FirstOnboading> {
+class _ThirdOnboadingState extends State<ThirdOnboading> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,15 +32,15 @@ class _FirstOnboadingState extends State<FirstOnboading> {
         child: Center(
           child: Column(
             children: [
-              Image.asset("assets/images/first_onboading.png"),
+              Image.asset("assets/images/third_onboading.png"),
               SizedBox(height: 30),
               Row(
                 mainAxisAlignment: .center,
-                children: [indicator(true), indicator(false), indicator(false)],
+                children: [indicator(false), indicator(false), indicator(true)],
               ),
               SizedBox(height: 30),
               Text(
-                "Manage your tasks",
+                "Orgonaize your tasks",
                 style: TextStyle(
                   fontFamily: 'Lato',
                   fontWeight: FontWeight.bold,
@@ -50,7 +50,7 @@ class _FirstOnboadingState extends State<FirstOnboading> {
               ),
               SizedBox(height: 10),
               Text(
-                "You can easily manage all of your daily\n          tasks in DoMe for free",
+                "     You can organize your daily tasks by \nadding your tasks into separate categories",
                 style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'Lato',
@@ -82,10 +82,10 @@ class _FirstOnboadingState extends State<FirstOnboading> {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => SecondOnboading()),);
+                       Navigator.push(context, MaterialPageRoute(builder: (context) => StartScreen()),);
                     },
                     child: Text(
-                      "NEXT",
+                      "GET STARTED",
                       style: TextStyle(
                         fontSize: 16,
                         fontFamily: 'Lato',
@@ -114,3 +114,4 @@ class _FirstOnboadingState extends State<FirstOnboading> {
     );
   }
 }
+
