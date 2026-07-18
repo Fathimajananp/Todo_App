@@ -34,6 +34,19 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
 
       ),
+      body: Center(
+        child: Column(
+          children: [
+            SizedBox(height: 30,)
+            ,Image.asset("assets/images/home_screen.png"),
+            SizedBox(height: 15,),
+            Text("What do you want to do today?")
+          ],
+        ),
+      )
+
+
+      
     );
   }
 }
